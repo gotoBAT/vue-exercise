@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sessionStorage</title>
+</head>
+<body>
+    <button onclick="add()">添加 </button>
+    <button onclick="watch()">查看 </button>
+    <button onclick="remove()">删除 </button>
+    <button onclick="clear()">清空 </button>
+    <script type="text/javascript">
+        function add(){
+            sessionStorage.setItem('michael','18');
+            const obj = {name:"durant",sex:"男"};
+            sessionStorage.setItem('obj',JSON.stringify(obj))
+        }
+        function watch(){
+            console.log(sessionStorage.getItem('michael'));
+        }
+        function remove(){
+            sessionStorage.removeItem('michael');
+        }
+        function clear(){
+            sessionStorage.clear();
+        }
+    </script>
+</body>
+</html>
